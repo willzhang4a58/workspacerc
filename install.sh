@@ -1,0 +1,1 @@
+echo "source .mybashrc" >> .bashrc
