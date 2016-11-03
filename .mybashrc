@@ -1,5 +1,6 @@
 PS1="\[\e[36;1m\]\u\[\e[33;1m\]@\[\e[33;1m\]\H:\[\e[32;1m\]\w \[\e[31;1m\]$ \[\e[0m\]"
 
 alias tree='tree -C'
+alias search_code='find . -name "*.h" -or -name "*.cuh" -or -name "*.cpp" | xargs grep --color=auto'
 
 source ./.mybash/git-completion.bash
