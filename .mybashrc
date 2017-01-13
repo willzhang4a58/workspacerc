@@ -6,7 +6,6 @@ alias search_code='find . -name "*.h" -or -name "*.cuh" \
                                       -or -name "*.cu" \
                                       -or -name "*.cc" \
                                       -or -name "*.c" \
-                                      -or -name "*.h" \
                                       -or -name "CMakeLists.txt" \
                                       -or -name "*.cmake" | xargs grep -i --color=auto'
 
