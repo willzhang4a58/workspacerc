@@ -11,4 +11,11 @@ alias search_code='find . -name "*.h" -or -name "*.cuh" \
                                       -or -name "*.prototxt" \
                                       -or -name "*.cmake" | xargs grep -i --color=auto'
 
+alias wc_code='find . -name "*.h" -or -name "*.cuh" \
+                                  -or -name "*.cpp" \
+                                  -or -name "*.cu" \
+                                  -or -name "*.cc" \
+                                  -or -name "*.c" \
+                                  -or -name "*.proto" | xargs wc -l'
+
 source ./.mybash/git-completion.bash
