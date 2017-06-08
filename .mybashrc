@@ -19,3 +19,5 @@ alias wc_code='find . -name "*.h" -or -name "*.cuh" \
                                   -or -name "*.proto" | xargs wc -l | sort -n'
 
 source ./.mybash/git-completion.bash
+
+export PATH=$HOME/.bin:$PATH
