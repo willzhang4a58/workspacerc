@@ -16,22 +16,21 @@ def UpdateGuard(file_path, new_guard):
       if old_guard_candidate == old_guard_check:
         old_guard = old_guard_candidate
         break
+  if old_guard == new_guard or old_guard == "":
+    return
   # replace
   for i in range(0, len(cont_lines)):
-    cont_lines[i].replace(old_guard, new_guard)
+    cont_lines[i] = cont_lines[i].replace(old_guard, new_guard)
   # write
   fp = open(file_path, 'w')
   for line in cont_lines:
     fp.write(line)
   fp.close()
 
-
-  #fp = open(file_path, 'w')
-
 if __name__ == '__main__':
   prefix = ('_'.join(sys.argv[1:]) + '_').upper()
   for root, dirs, files in os.walk('.'):
     for file_name in files:
       file_path = root + '/' + file_name
-      guard = prefix + '_'.join([root, file_name])[2:].replace('.', '_').upper()
+      guard = prefix + '_'.join([root, file_name])[2:].replace('.', '_').upper() + '_'
       UpdateGuard(file_path, guard)
