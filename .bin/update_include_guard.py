@@ -32,5 +32,5 @@ if __name__ == '__main__':
   for root, dirs, files in os.walk('.'):
     for file_name in files:
       file_path = root + '/' + file_name
-      guard = prefix + '_'.join([root, file_name])[2:].replace('.', '_').upper() + '_'
+      guard = prefix + '_'.join([root, file_name])[2:].replace('.', '_').replace('/', '_').upper() + '_'
       UpdateGuard(file_path, guard)
