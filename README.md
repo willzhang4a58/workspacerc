@@ -1,7 +1,4 @@
-# workspacerc
-Personal Configuration for Workspace
-
-# install
+# Install
 
 Just copy this to your shell
 
