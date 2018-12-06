@@ -386,7 +386,7 @@ execute pathogen#infect()
 
 colorscheme peaksea
 set nu
-set cc=100
+set cc=80
 set fdm=syntax
 set foldlevel=100
 set cursorline
