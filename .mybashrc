@@ -3,3 +3,5 @@ alias ll='ls -l -a -h'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH=$HOME/.bin:$PATH
+export XTERM=xterm-256color
+bind -f ~/.inputrc
