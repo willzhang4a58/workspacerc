@@ -388,12 +388,14 @@ colorscheme peaksea
 set nu
 set cc=80
 set fdm=syntax
+autocmd FileType python set fdm=indent
 set foldlevel=100
 set cursorline
 set tabpagemax=18
 hi CursorLine cterm=NONE ctermbg=236
 map ,; :tabp<cr>
 map ,' :tabn<cr>
+nnoremap <space> za
 set fileencodings=ucs-bom,gb2312,utf-8,gbk,latin1,cp936
 
 let g:cpp_class_scope_highlight = 1
