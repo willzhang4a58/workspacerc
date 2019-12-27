@@ -401,3 +401,5 @@ set fileencodings=ucs-bom,gb2312,utf-8,gbk,latin1,cp936
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 set complete-=i
+autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
