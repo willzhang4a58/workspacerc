@@ -31,6 +31,8 @@ if __name__ == '__main__':
   prefix = ('_'.join(sys.argv[1:]) + '_').upper()
   for root, dirs, files in os.walk('.'):
     for file_name in files:
+      if not file_name.endswith(".h"):
+        continue
       file_path = root + '/' + file_name
       guard = prefix + '_'.join([root, file_name])[2:].replace('.', '_').replace('/', '_').upper() + '_'
       UpdateGuard(file_path, guard)
