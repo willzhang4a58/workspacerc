@@ -347,8 +347,6 @@ endfunction
 " plug
 
 call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/peaksea'
-Plug 'altercation/vim-colors-solarized'
 Plug 'skreek/skeletor.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'pseewald/vim-anyfold'
@@ -356,9 +354,6 @@ Plug 'luochen1990/rainbow'
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
 call plug#end()
-
-" solarized
-let g:solarized_termcolors=256
 
 " vim-cpp-enhanced-highlight
 
@@ -387,6 +382,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " magic
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
 nnoremap <space> za
 map <leader>; :tabp<cr>
 map <Leader>' :tabn<cr>
@@ -396,4 +394,5 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 set tabpagemax=18
 set cursorline
-set cc=80
+autocmd Filetype cpp,cc,cu,h set cc=80
+highlight ColorColumn guibg=darkgrey
