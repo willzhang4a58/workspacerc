@@ -1,5 +1,5 @@
 # Install
 
-Just copy this to your shell
+Just run
 
-`cd ~/ && wget https://raw.githubusercontent.com/willzhang4a58/workspacerc/master/.tmp/.install.sh -O - | sh`
+`git init && git remote add origin https://github.com/willzhang4a58/workspacerc.git && git pull origin master && echo "\$include ~/.myinputrc" >> .inputrc && echo "source ~/.mybashrc" >> .bashrc && rm README.md && vim +PlugInstall +qall`
