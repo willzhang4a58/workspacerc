@@ -4,6 +4,7 @@ set history=500
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -348,7 +349,12 @@ endfunction
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/peaksea'
 Plug 'altercation/vim-colors-solarized'
+Plug 'skreek/skeletor.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'pseewald/vim-anyfold'
+Plug 'luochen1990/rainbow'
+Plug 'itchyny/lightline.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " solarized
@@ -363,10 +369,31 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
+" vim-anyfold
+
+syntax on
+autocmd Filetype * AnyFoldActivate
+set foldlevel=99
+
+" rainbow
+let g:rainbow_active = 1
+
+" nerdtree
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " magic
+nnoremap <space> za
 map <leader>; :tabp<cr>
 map <Leader>' :tabn<cr>
 try
-    colorscheme solarized
+    colorscheme skeletor
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
+set tabpagemax=18
+set cursorline
+set cc=80
