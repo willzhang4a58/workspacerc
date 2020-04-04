@@ -362,4 +362,7 @@ let g:cpp_concepts_highlight = 1
 " magic
 map <leader>; :tabp<cr>
 map <Leader>' :tabn<cr>
-color peaksea
+try
+    colorscheme peaksea
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
