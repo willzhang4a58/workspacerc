@@ -348,7 +348,6 @@ endfunction
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/peaksea'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'dense-analysis/ale'
 call plug#end()
 
 " vim-cpp-enhanced-highlight
