@@ -347,8 +347,12 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/peaksea'
+Plug 'altercation/vim-colors-solarized'
 Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
+
+" solarized
+let g:solarized_termcolors=256
 
 " vim-cpp-enhanced-highlight
 
@@ -363,6 +367,6 @@ let g:cpp_concepts_highlight = 1
 map <leader>; :tabp<cr>
 map <Leader>' :tabn<cr>
 try
-    colorscheme peaksea
+    colorscheme solarized
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
