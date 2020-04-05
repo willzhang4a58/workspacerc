@@ -355,6 +355,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/a.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " vim-cpp-enhanced-highlight
@@ -399,7 +400,7 @@ nnoremap <space> za
 map <leader>; :tabp<cr>
 map <Leader>' :tabn<cr>
 try
-    colorscheme skeletor
+    colorscheme solarized8
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 set tabpagemax=18
