@@ -355,6 +355,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'voldikss/vim-translator'
 call plug#end()
 
 " vim-cpp-enhanced-highlight
@@ -404,6 +405,10 @@ nnoremap <leader>m :LeaderfFunction<cr>
 nnoremap <leader>f :LeaderfFile<cr>
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
+
+" translator
+nmap <leader>ez :TranslateW -e youdao -tl zh -sl en<cr>
+nmap <leader>ze :TranslateW! -e youdao -tl zh -sl en<cr>
 
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
