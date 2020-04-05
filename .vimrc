@@ -356,6 +356,7 @@ Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'voldikss/vim-translator'
+Plug 'skywind3000/vim-preview'
 call plug#end()
 
 " vim-cpp-enhanced-highlight
@@ -396,6 +397,7 @@ let g:autoformat_retab = 0
 
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_ctags_exclude = ['build']
+let g:gutentags_ctags_extra_args = ['--fields=+nS']
 
 " signify
 set updatetime=100
@@ -409,6 +411,9 @@ let g:Lf_PreviewInPopup = 1
 " translator
 nmap <leader>ez :TranslateW -e youdao -tl zh -sl en<cr>
 nmap <leader>ze :TranslateW! -e youdao -tl zh -sl en<cr>
+
+" preview
+nmap <leader>p :PreviewTag<cr>
 
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
