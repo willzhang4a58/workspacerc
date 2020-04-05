@@ -352,6 +352,9 @@ Plug 'vim-scripts/a.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'mhinz/vim-signify'
+Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 call plug#end()
 
 " vim-cpp-enhanced-highlight
@@ -392,6 +395,15 @@ let g:autoformat_retab = 0
 
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_ctags_exclude = ['build']
+
+" signify
+set updatetime=100
+
+" LeaderF
+nnoremap <leader>m :LeaderfFunction<cr>
+nnoremap <leader>f :LeaderfFile<cr>
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
 
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
