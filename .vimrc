@@ -414,6 +414,7 @@ nmap <leader>ze :TranslateW! -e youdao -tl zh -sl en<cr>
 
 " preview
 nmap <leader>p :PreviewTag<cr>
+nmap <leader>pc :PreviewClose<cr>
 
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
