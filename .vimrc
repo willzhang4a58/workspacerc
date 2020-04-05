@@ -85,11 +85,6 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-
-" Add a bit extra margin to the left
-set foldcolumn=1
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -356,6 +351,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-scripts/a.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'lifepillar/vim-solarized8'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " vim-cpp-enhanced-highlight
@@ -391,6 +387,11 @@ nnoremap <leader>s :IHS<CR>:A<CR>
 au BufWrite * :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
+
+" ctags
+
+let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_ctags_exclude = ['build']
 
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
