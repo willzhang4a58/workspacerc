@@ -357,6 +357,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'voldikss/vim-translator'
 Plug 'skywind3000/vim-preview'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 " vim-cpp-enhanced-highlight
