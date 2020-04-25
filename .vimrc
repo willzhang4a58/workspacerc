@@ -372,7 +372,7 @@ let g:cpp_concepts_highlight = 1
 " vim-anyfold
 
 syntax on
-autocmd Filetype * AnyFoldActivate
+autocmd Filetype cpp,cc,cu,h,py AnyFoldActivate
 set foldlevel=99
 
 " rainbow
