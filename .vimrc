@@ -422,7 +422,7 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 set tabpagemax=18
 set cursorline
-autocmd Filetype cpp,cc,cu,h set cc=80
+autocmd Filetype cpp,cc,cu,h,py set cc=80
 autocmd Filetype cpp,cc,cu,h set shiftwidth=2
 autocmd Filetype cpp,cc,cu,h set tabstop=2
 highlight ColorColumn guibg=darkgrey
