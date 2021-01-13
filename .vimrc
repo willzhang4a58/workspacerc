@@ -383,12 +383,6 @@ set updatetime=100
 
 Plug 'Yggdroot/indentLine'
 
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-nnoremap <leader>m :LeaderfFunction<cr>
-nnoremap <leader>f :LeaderfFile<cr>
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-
 Plug 'skywind3000/vim-preview'
 nmap <leader>p :PreviewTag<cr>
 nmap <leader>pc :PreviewClose<cr>
