@@ -342,26 +342,8 @@ endfunction
 " plug
 
 call plug#begin('~/.vim/plugged')
-Plug 'skreek/skeletor.vim'
+
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'pseewald/vim-anyfold'
-Plug 'luochen1990/rainbow'
-Plug 'itchyny/lightline.vim'
-Plug 'preservim/nerdtree'
-Plug 'vim-scripts/a.vim'
-Plug 'Chiel92/vim-autoformat'
-Plug 'lifepillar/vim-solarized8'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'mhinz/vim-signify'
-Plug 'Yggdroot/indentLine'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'voldikss/vim-translator'
-Plug 'skywind3000/vim-preview'
-Plug 'terryma/vim-multiple-cursors'
-call plug#end()
-
-" vim-cpp-enhanced-highlight
-
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
@@ -369,45 +351,51 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
-" vim-anyfold
-
+Plug 'pseewald/vim-anyfold'
 syntax on
 autocmd Filetype cpp,cc,cu,h,py AnyFoldActivate
 set foldlevel=99
 
-" rainbow
+Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
-" a.vim
+Plug 'itchyny/lightline.vim'
+
+Plug 'preservim/nerdtree'
+
+Plug 'vim-scripts/a.vim'
 nnoremap <leader>s :IHS<CR>:A<CR>
 
-" autoformat
-au BufWrite * :Autoformat
+Plug 'Chiel92/vim-autoformat'
+au BufWrite *.cpp,*.cc,*.cu,*.h :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 
-" ctags
+Plug 'lifepillar/vim-solarized8'
 
+Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_ctags_exclude = ['build']
 let g:gutentags_ctags_extra_args = ['--fields=+nS']
 
-" signify
+Plug 'mhinz/vim-signify'
 set updatetime=100
 
-" LeaderF
+Plug 'Yggdroot/indentLine'
+
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 nnoremap <leader>m :LeaderfFunction<cr>
 nnoremap <leader>f :LeaderfFile<cr>
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 
-" translator
-nmap <leader>ez :TranslateW -e youdao -tl zh -sl en<cr>
-nmap <leader>ze :TranslateW! -e youdao -tl zh -sl en<cr>
-
-" preview
+Plug 'skywind3000/vim-preview'
 nmap <leader>p :PreviewTag<cr>
 nmap <leader>pc :PreviewClose<cr>
+
+Plug 'terryma/vim-multiple-cursors'
+
+call plug#end()
 
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
