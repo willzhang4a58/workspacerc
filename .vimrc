@@ -353,7 +353,7 @@ let g:cpp_concepts_highlight = 1
 
 Plug 'pseewald/vim-anyfold'
 syntax on
-autocmd Filetype cpp,cc,cu,h,py AnyFoldActivate
+autocmd Filetype cpp,python,cuda AnyFoldActivate
 set foldlevel=99
 
 Plug 'luochen1990/rainbow'
@@ -405,7 +405,6 @@ endtry
 set tabpagemax=18
 set cursorline
 set cc=101
-autocmd Filetype cpp,cc,cu,h set shiftwidth=2
-autocmd Filetype cpp,cc,cu,h set tabstop=2
+autocmd Filetype cpp,cuda set shiftwidth=2
+autocmd Filetype cpp,cuda set tabstop=2
 highlight ColorColumn guibg=darkgrey
-
