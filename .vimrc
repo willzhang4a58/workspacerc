@@ -399,10 +399,6 @@ set shortmess+=c
 
 call plug#end()
 
-" open the header file automatically
-au BufRead,BufNewFile *.cc nested if bufwinnr("^" . expand("%:r").".h$") == -1 | exe "vsplit" fnameescape(expand("%:r").".h") | endif
-au BufRead,BufNewFile *.cpp nested if bufwinnr("^" . expand("%:r").".h$") == -1 | exe "vsplit" fnameescape(expand("%:r").".h") | endif
-
 " magic
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
