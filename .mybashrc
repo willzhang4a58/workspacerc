@@ -9,18 +9,3 @@ bind -f ~/.inputrc
 if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
 fi
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  source $(brew --prefix)/etc/bash_completion
-fi
-
-origin_vim=`which vim`
-vim() {
-  if [[ -f $1.h && -f $1.cpp ]]; then
-    ${origin_vim} -O $1.h $1.cpp
-  elif [[ -f $1h && -f $1cpp ]]; then
-    ${origin_vim} -O $1h $1cpp
-  else
-    ${origin_vim} $@
-  fi
-}
