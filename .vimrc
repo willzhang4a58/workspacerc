@@ -389,14 +389,6 @@ nmap <leader>pc :PreviewClose<cr>
 
 Plug 'terryma/vim-multiple-cursors'
 
-Plug 'skywind3000/vim-dict'
-
-Plug 'skywind3000/vim-auto-popmenu'
-let g:apc_enable_ft = {'*':1}
-set cpt=.,k,w,b,t " see ':help cpt'
-set completeopt=menu,menuone,noselect
-set shortmess+=c
-
 call plug#end()
 
 " magic
