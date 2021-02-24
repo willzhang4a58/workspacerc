@@ -389,6 +389,9 @@ nmap <leader>pc :PreviewClose<cr>
 
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+map <leader>l :LeaderfFunction<cr>
+
 call plug#end()
 
 " magic
