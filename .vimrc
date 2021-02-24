@@ -394,20 +394,31 @@ map <leader>l :LeaderfFunction<cr>
 
 call plug#end()
 
-" magic
+" 24bit color
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
-nnoremap <space> za
-map <leader>; :tabp<cr>
-map <Leader>' :tabn<cr>
 try
     colorscheme solarized8
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
+highlight ColorColumn guibg=darkgrey
+
+" move tab
+map <leader>; :tabp<cr>
+map <Leader>' :tabn<cr>
 set tabpagemax=18
-set cursorline
-set cc=101
+
+" tab
 autocmd Filetype cpp,cuda set shiftwidth=2
 autocmd Filetype cpp,cuda set tabstop=2
-highlight ColorColumn guibg=darkgrey
+
+set cursorline
+set cc=101
+
+" useful map
+nnoremap <space> za
+nnoremap - :Ex<cr>
+
+" split with the current buffer's path
+map <leader>vs :vs <C-r>=expand("%:p:h")<cr>/
