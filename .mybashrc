@@ -2,7 +2,6 @@ PS1="\[\e[36;1m\]\u\[\e[33;1m\]@\[\e[33;1m\]\H:\[\e[32;1m\]\w \[\e[31;1m\]$ \[\e
 alias ll='ls -l -a -h'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH=$HOME/.bin:$PATH
 export TERM=xterm-256color
 bind -f ~/.inputrc
 
