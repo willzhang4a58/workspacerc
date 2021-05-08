@@ -390,6 +390,8 @@ nmap <leader>pc :PreviewClose<cr>
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
 map <leader>l :LeaderfFunction<cr>
 
 call plug#end()
