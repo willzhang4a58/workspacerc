@@ -416,7 +416,7 @@ autocmd Filetype cpp,cuda set shiftwidth=2
 autocmd Filetype cpp,cuda set tabstop=2
 
 set cursorline
-set cc=101
+set cc=81
 
 " useful map
 nnoremap <space> za
