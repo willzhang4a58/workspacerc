@@ -373,7 +373,7 @@ let g:autoformat_retab = 0
 
 Plug 'lifepillar/vim-solarized8'
 
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_ctags_exclude = ['build']
 let g:gutentags_ctags_extra_args = ['--fields=+nS']
@@ -419,6 +419,7 @@ set cc=101
 " useful map
 nnoremap <space> za
 nnoremap - :Ex<cr>
+nnoremap v <c-v>
 
 " split with the current buffer's path
 map <leader>vs :vs <C-r>=expand("%:p:h")<cr>/
