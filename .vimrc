@@ -390,6 +390,8 @@ nmap <leader>pc :PreviewClose<cr>
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
 map <leader>l :LeaderfFunction<cr>
 
 call plug#end()
@@ -414,7 +416,7 @@ autocmd Filetype cpp,cuda set shiftwidth=2
 autocmd Filetype cpp,cuda set tabstop=2
 
 set cursorline
-set cc=101
+set cc=81
 
 " useful map
 nnoremap <space> za
