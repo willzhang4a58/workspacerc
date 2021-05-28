@@ -343,7 +343,7 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com.cnpmjs.org/octol/vim-cpp-enhanced-highlight'
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
@@ -351,45 +351,45 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
-Plug 'pseewald/vim-anyfold'
+Plug 'https://github.com.cnpmjs.org/pseewald/vim-anyfold'
 syntax on
 autocmd Filetype cpp,python,cuda AnyFoldActivate
 set foldlevel=99
 
-Plug 'luochen1990/rainbow'
+Plug 'https://github.com.cnpmjs.org/luochen1990/rainbow'
 let g:rainbow_active = 1
 
-Plug 'itchyny/lightline.vim'
+Plug 'https://github.com.cnpmjs.org/itchyny/lightline.vim'
 
-Plug 'preservim/nerdtree'
+Plug 'https://github.com.cnpmjs.org/preservim/nerdtree'
 
-Plug 'vim-scripts/a.vim'
+Plug 'https://github.com.cnpmjs.org/vim-scripts/a.vim'
 nnoremap <leader>s :IHS<CR>:A<CR>
 
-Plug 'Chiel92/vim-autoformat'
-au BufWrite *.cpp,*.cc,*.cu,*.h :Autoformat
+Plug 'https://github.com.cnpmjs.org/Chiel92/vim-autoformat'
+au BufWrite *.hpp,*.cuh,*.cpp,*.cc,*.cu,*.h :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 
-Plug 'lifepillar/vim-solarized8'
+Plug 'https://github.com.cnpmjs.org/lifepillar/vim-solarized8'
 
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'https://github.com.cnpmjs.org/ludovicchabant/vim-gutentags'
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_ctags_exclude = ['build']
 let g:gutentags_ctags_extra_args = ['--fields=+nS']
 
-Plug 'mhinz/vim-signify'
+Plug 'https://github.com.cnpmjs.org/mhinz/vim-signify'
 set updatetime=100
 
-Plug 'Yggdroot/indentLine'
+Plug 'https://github.com.cnpmjs.org/Yggdroot/indentLine'
 
-Plug 'skywind3000/vim-preview'
+Plug 'https://github.com.cnpmjs.org/skywind3000/vim-preview'
 nmap <leader>p :PreviewTag<cr>
 nmap <leader>pc :PreviewClose<cr>
 
-Plug 'terryma/vim-multiple-cursors'
+Plug 'https://github.com.cnpmjs.org/terryma/vim-multiple-cursors'
 
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'https://github.com.cnpmjs.org/Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_WorkingDirectoryMode = 'a'
