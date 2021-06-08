@@ -370,6 +370,8 @@ Plug 'https://github.com.cnpmjs.org/Chiel92/vim-autoformat'
 au BufWrite *.hpp,*.cuh,*.cpp,*.cc,*.cu,*.h :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
+let g:formatdef_cuda_formatter = '"clang-format --style=file"'
+let g:formatters_cuda = ['cuda_formatter']
 
 Plug 'https://github.com.cnpmjs.org/lifepillar/vim-solarized8'
 
