@@ -425,6 +425,7 @@ set cc=81
 nnoremap <space> za
 nnoremap - :Ex<cr>
 nnoremap v <c-v>
+nnoremap rm :call delete(expand('%')) \| bdelete!<CR>
 
 " split with the current buffer's path
 map <leader>vs :vs <C-r>=expand("%:p:h")<cr>/
