@@ -395,6 +395,7 @@ Plug 'https://github.com.cnpmjs.org/Yggdroot/LeaderF', { 'do': ':LeaderfInstallC
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_WorkingDirectoryMode = 'a'
+let g:Lf_UseCache = 0
 map <leader>l :LeaderfFunction<cr>
 
 call plug#end()
