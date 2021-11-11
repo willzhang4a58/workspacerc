@@ -343,7 +343,7 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com.cnpmjs.org/octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
@@ -351,47 +351,47 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
-Plug 'https://github.com.cnpmjs.org/pseewald/vim-anyfold'
+Plug 'https://github.com/pseewald/vim-anyfold'
 syntax on
 autocmd Filetype cpp,python,cuda AnyFoldActivate
 set foldlevel=99
 
-Plug 'https://github.com.cnpmjs.org/luochen1990/rainbow'
+Plug 'https://github.com/luochen1990/rainbow'
 let g:rainbow_active = 1
 
-Plug 'https://github.com.cnpmjs.org/itchyny/lightline.vim'
+Plug 'https://github.com/itchyny/lightline.vim'
 
-Plug 'https://github.com.cnpmjs.org/preservim/nerdtree'
+Plug 'https://github.com/preservim/nerdtree'
 
-Plug 'https://github.com.cnpmjs.org/vim-scripts/a.vim'
+Plug 'https://github.com/vim-scripts/a.vim'
 nnoremap <leader>s :IHS<CR>:A<CR>
 
-Plug 'https://github.com.cnpmjs.org/Chiel92/vim-autoformat'
+Plug 'https://github.com/Chiel92/vim-autoformat'
 au BufWrite *.hpp,*.cuh,*.cpp,*.cc,*.cu,*.h :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:formatdef_cuda_formatter = '"clang-format --style=file"'
 let g:formatters_cuda = ['cuda_formatter']
 
-Plug 'https://github.com.cnpmjs.org/lifepillar/vim-solarized8'
+Plug 'https://github.com/lifepillar/vim-solarized8'
 
-Plug 'https://github.com.cnpmjs.org/ludovicchabant/vim-gutentags'
+Plug 'https://github.com/ludovicchabant/vim-gutentags'
 let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_ctags_exclude = ['build']
 let g:gutentags_ctags_extra_args = ['--fields=+nS']
 
-Plug 'https://github.com.cnpmjs.org/mhinz/vim-signify'
+Plug 'https://github.com/mhinz/vim-signify'
 set updatetime=100
 
-Plug 'https://github.com.cnpmjs.org/Yggdroot/indentLine'
+Plug 'https://github.com/Yggdroot/indentLine'
 
-Plug 'https://github.com.cnpmjs.org/skywind3000/vim-preview'
+Plug 'https://github.com/skywind3000/vim-preview'
 nmap <leader>p :PreviewTag<cr>
 nmap <leader>pc :PreviewClose<cr>
 
-Plug 'https://github.com.cnpmjs.org/terryma/vim-multiple-cursors'
+Plug 'https://github.com/terryma/vim-multiple-cursors'
 
-Plug 'https://github.com.cnpmjs.org/Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'https://github.com/Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_WorkingDirectoryMode = 'a'
