@@ -403,9 +403,9 @@ Plug 'jacoborus/tender.vim'
 call plug#end()
 
 " 24bit color
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" set termguicolors
 try
     colorscheme tender
 catch /^Vim\%((\a\+)\)\=:E185/
@@ -422,7 +422,7 @@ autocmd Filetype cpp,cuda set shiftwidth=2
 autocmd Filetype cpp,cuda set tabstop=2
 
 set cursorline
-set cc=81
+set cc=101
 
 " useful map
 nnoremap <space> za
